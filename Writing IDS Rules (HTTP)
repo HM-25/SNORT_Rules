@@ -1,2 +1,9 @@
-# Write a single rule to detect "all TCP port 80 traffic" packets in the given pcap file. What is the number of detected packets?
-   
+alert tcp any 80 <> any any (msg:”TCP port 80 found”; sid:100001; rev:1;)
+
+alert tcp any any <> any 80(msg:”TCP port 80 found”; sid:100002; rev:1;)
+# for destination port
+
+# run command:
+sudo snort -c local.rules -A full -l . -r mx-3.pcap
+
+# NOTE: I used NANO text editer to implement the rules.

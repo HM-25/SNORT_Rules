@@ -1,2 +1,0 @@
-1. Write a single rule to detect "all TCP port 80 traffic" packets in the given pcap file. 
-What is the number of detected packets?

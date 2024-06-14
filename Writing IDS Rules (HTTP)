@@ -1,3 +1,5 @@
+# CH 1
+
 alert tcp any 80 <> any any (msg:”TCP port 80 found”; sid:100001; rev:1;)
 
 alert tcp any any <> any 80(msg:”TCP port 80 found”; sid:100002; rev:1;)
@@ -7,3 +9,6 @@ alert tcp any any <> any 80(msg:”TCP port 80 found”; sid:100002; rev:1;)
 sudo snort -c local.rules -A full -l . -r mx-3.pcap
 
 # NOTE: I used NANO text editer to implement the rules.
+
+# CH 2
+
